@@ -65,7 +65,7 @@ print('№8')
 nechetn = 0
 summ = 0
 n = int(input('Введите количество значений: '))
-for i in range(1, n+1):
+for i in range(1, n + 1):
     a = int(input('Введите число: '))
     if a % 2 != 0:
         nechetn = nechetn + 1
