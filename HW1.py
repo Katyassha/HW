@@ -8,18 +8,24 @@ b = int(N) % int(K)
 print('Останется в холодильнике', b)
 #############################################
 print('№3')
-hours = 10
-minutes = 00
-summ = 0
-for i in range(3):
-    b = int(input('Время, требуемое для выполнения дела: '))
-    summ = summ + b
-c = hours + summ // 60
-d = minutes + summ % 60
-if d // 10 == 0:
-    print(c, d, sep=':', end='0')
+n = int(input('Количество дел: '))
+h = 10
+m = 0
+s = 0
+for i in range(1, n + 1):
+    s += int(input('Время, требуемое для выполнения дела: '))
+h += s // 60
+m += s % 60
+if m // 10 == 0:
+    if 0 <= h <= 23:
+        print(h, m, sep=':', end='0')
+    if 23 < h and (h // 24 >= 1):
+        print(h - (24 * (h//24)), m, sep=':', end='0')
 else:
-    print(c, d, sep=':')
+    if 0 <= h <= 23:
+        print(h, m, sep=':')
+    if 23 < h and (h // 24 >= 1):
+        print(h - (24 * (h//24)), m, sep=':')
 #############################################
 print('№4')
 a = input("Введите пароль: ")
