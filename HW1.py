@@ -20,7 +20,7 @@ if m // 10 == 0:
     if 0 <= h <= 23:
         print(h, m, sep=':', end='0')
     if 23 < h and (h // 24 >= 1):
-        print(h - (24 * (h//24)), m, sep=':', end='0')
+        print(h - (24 * (h//24)), m, sep=':0')
 else:
     if 0 <= h <= 23:
         print(h, m, sep=':')
