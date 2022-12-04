@@ -5,7 +5,7 @@ a = int(input('Задайте начало диапазона: '))
 b = int(input('Задайте конец диапазона: '))
 s = list()
 for i in range(n):
-    s.append(random.randint(a, b + 1))
+    s.append(random.randint(a, b))
 print(s)
 print(len(s))
 print(max(s))
